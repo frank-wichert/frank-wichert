@@ -42,7 +42,7 @@ Als ehemaliger Soldat auf Zeit (12 Jahre) verbinde ich operative Klarheit mit st
 Modulare SaaS mit vier Fachmodulen, Multi-LLM-Routing (Claude + lokales LLM), RAG-Layer, Live-Cockpit und CI/CD-Pipeline mit ≥80 % Coverage.
 `FastAPI` `Next.js 15` `K3s` `Claude API` `RAG` `OpenTelemetry`
 
-### ⚡ Donna — Multi-Tenant Voice-AI-SaaS für B2B-Vermietung · *Pilotphase Q2 2026*
+### ⚡ Multi-Tenant Voice-AI-SaaS für B2B-Vermietung · *Pilotphase Q2 2026*
 Mandantenfähige Voice-Plattform mit SIP-Trunk, sechs-stufigem Conversational-Design, DSGVO-Voice-Consent (<1s TTFB) und MCP-basierter Halluzinations-Detection.
 `Twilio` `Pipecat` `Whisper` `ElevenLabs` `Claude` `MCP`
 
