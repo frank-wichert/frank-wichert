@@ -71,6 +71,8 @@ flowchart TD
     class SEC,SAAS,CORE sec;
 ```
 
+> 📐 **Vertiefung:** [**darion-architecture**](https://github.com/frank-wichert/darion-architecture) — öffentliche Architektur-Vitrine mit Diagramm, Bausteinen und Sicherheits-Prinzipien.
+
 ---
 
 ## Aktuelle DARC-Eigenentwicklungen — seit 08/2024
