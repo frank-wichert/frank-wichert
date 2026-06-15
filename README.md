@@ -4,7 +4,7 @@
 
 # Frank Wichert
 
-**Interim Manager · CIO · Projekt- und Krisenmanager · KI-Experte · Keynote Speaker**
+[![Rollen](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=2563EB&center=true&vCenter=true&width=620&lines=Interim+Manager+%C2%B7+CIO;KI-Architekt+%26+Krisenmanager;Digitalisierung+%C2%B7+NIS2+%C2%B7+ISO+27001;48h+einsatzbereit)](https://darc-transform.de)
 
 *DARC Management UG · Gevelsberg*
 
@@ -12,7 +12,12 @@
 [![DARION](https://img.shields.io/badge/darion--ai.de-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://darion-ai.de)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/frank-wichert-5b0017294/)
 [![Email](https://img.shields.io/badge/frank.wichert%40darc--mgt.de-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:frank.wichert@darc-mgt.de)
+
+[![Termin buchen](https://img.shields.io/badge/📅_Termin_buchen-2563EB?style=for-the-badge)](https://book.darion-ai.de)
+[![Keynote anfragen](https://img.shields.io/badge/🎤_Keynote_anfragen-7C3AED?style=for-the-badge)](mailto:frank.wichert@darc-mgt.de?subject=Keynote-Anfrage)
 [![Verfügbar](https://img.shields.io/badge/48h_einsatzbereit-22C55E?style=for-the-badge)]()
+
+![Profil-Aufrufe](https://komarev.com/ghpvc/?username=frank-wichert&style=flat&color=2563EB&label=Profil-Aufrufe)
 
 </div>
 
@@ -31,6 +36,40 @@ Als ehemaliger Soldat auf Zeit (12 Jahre) verbinde ich operative Klarheit mit st
 | **Mandate** | **Jahre Führung** | **Branchen** | **Mitarbeiter als CIO** |
 
 </div>
+
+---
+
+## Architektur im Überblick
+
+> *Souveräne, mandantenfähige Plattform — IT-Sicherheit und Compliance als Fundament, nicht als Nachgedanke.*
+
+```mermaid
+flowchart TD
+    U["👤 Mandanten / Pilotkunden"] --> CF["Cloudflare WAF · Access · Zero-Trust"]
+    CF --> MESH["Mesh-VPN · Reverse-Proxy<br/>5 VPS + 2 Bare-Metal CPU/GPU"]
+
+    subgraph CLUSTER["K3s-Cluster · Multi-Tenancy"]
+        SAAS["DARION SaaS<br/>18+ Fachmodule"]
+        CORE["DARION Core + Tina<br/>KI-Agenten-Orchestrierung"]
+        WIKI["Wissens-Hub<br/>Outline / RAG"]
+    end
+
+    MESH --> SAAS
+    MESH --> CORE
+    MESH --> WIKI
+
+    SAAS --> DATA[("CNPG · PostgreSQL<br/>HA + Pooler")]
+    CORE --> KG[("Neo4j · Knowledge-Graph")]
+    CORE --> LLM["Multi-LLM-Routing<br/>Claude + lokales LLM"]
+    SAAS --> SEC["🔐 Vault · OIDC · MFA"]
+    CORE --> SEC
+    CLUSTER --> OBS["📊 Observability<br/>OpenTelemetry · Prometheus · Backup"]
+
+    classDef edge fill:#1F2937,stroke:#2563EB,color:#fff;
+    classDef sec fill:#7C3AED,stroke:#fff,color:#fff;
+    class CF,MESH edge;
+    class SEC,SAAS,CORE sec;
+```
 
 ---
 
@@ -91,11 +130,11 @@ Als ehemaliger Soldat auf Zeit (12 Jahre) verbinde ich operative Klarheit mit st
 
 ## 🎤 Keynote Speaker
 
-**Aktuelle Keynote — AI Days 2026 Frankfurt**
-*Ein Tag, der zeigt, warum KI nicht ohne den Menschen funktioniert*
-📅 28. April 2026 · Frankfurt am Main
+Vorträge und Keynotes zu KI, Digitalisierung und Führung — u. a. bei den **AI Days 2026 Frankfurt** („Warum KI nicht ohne den Menschen funktioniert").
 
-**Themenfelder:** KI im Mittelstand · Digitale Transformation · Führung in der Krise
+**Themenfelder:** KI im Mittelstand · Digitale Transformation · Führung in der Krise · Souveräne KI & NIS 2.0
+
+[![Keynote anfragen](https://img.shields.io/badge/🎤_Keynote_anfragen-7C3AED?style=for-the-badge)](mailto:frank.wichert@darc-mgt.de?subject=Keynote-Anfrage)
 
 ---
 
