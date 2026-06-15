@@ -36,47 +36,22 @@ Als ehemaliger Soldat auf Zeit (12 Jahre) verbinde ich operative Klarheit mit st
 
 ## Aktuelle DARC-Eigenentwicklungen — seit 08/2024
 
-> *Seit Q3 2024 baue ich als Lead Architect mit einem Kernteam (zwei Entwickler plus AI-Pair-Programming) zehn produktive Plattformen und Infrastruktur-Bausteine auf. Eigenentwicklung mit Pilotkunden, Multi-Tenancy als Fundament, IT-Sicherheit und Compliance von Beginn an mitgedacht.*
+> *Seit Q3 2024 baue ich als Lead Architect mit einem Kernteam (zwei Entwickler plus AI-Pair-Programming) produktive Plattformen und Infrastruktur-Bausteine auf. Eigenentwicklung mit Pilotkunden, Multi-Tenancy als Fundament, IT-Sicherheit und Compliance von Beginn an mitgedacht.*
 
-### ⚡ DARION — Multi-Tenant SaaS für HR & Projekt-Management mit KI · *Soft-Launch Q2 2026*
-Modulare SaaS mit vier Fachmodulen, Multi-LLM-Routing (Claude + lokales LLM), RAG-Layer, Live-Cockpit und CI/CD-Pipeline mit ≥80 % Coverage.
-`FastAPI` `Next.js 15` `K3s` `Claude API` `RAG` `OpenTelemetry`
-
-### ⚡ Multi-Tenant Voice-AI-SaaS für B2B-Vermietung · *Pilotphase Q2 2026*
-Mandantenfähige Voice-Plattform mit SIP-Trunk, sechs-stufigem Conversational-Design, DSGVO-Voice-Consent (<1s TTFB) und MCP-basierter Halluzinations-Detection.
-`Twilio` `Pipecat` `Whisper` `ElevenLabs` `Claude` `MCP`
-
-### ⚡ DARION Core — KI-Agenten-Orchestrierung mit RAG & Knowledge-Graph · *6 Phasen produktiv*
-Mixture-of-Agents-Framework mit Plan-, Critic-, Recall-Agent und Orchestrator. Unified Query Hub mit sechs Routen, Knowledge-Graph (Graphiti/Neo4j), 176 grüne Tests.
-`Claude` `LiteLLM` `Graphiti` `Neo4j` `MCP` `Langfuse`
-
-### 🔄 Paperclip — KMU-Knowledge-Hub mit RAG · *Q3 2024 – Q2 2026 (Ablösung)*
-RAG-basierter Knowledge-Hub mit ca. 22 spezialisierten Agenten, Self-Hosted-LLM (Ollama/Qwen) plus Cloud-Fallback und Web-Recherche-Pipeline mit Lead-Enrichment.
-`AnythingLLM` `Ollama` `Qwen 2.5` `Apollo` `SerpAPI` `n8n`
-
-### ⚡ Self-Hosted Identity-, Geheimnis- und Schlüssel-Management · *In Betrieb*
-Dualer Vault-Ansatz mit zweiter Vertrauenslinie für besonders schützenswerte Geheimnisse, dokumentiertem Schlüssel-Lebenszyklus und Reaktionsprozess für Geheimnis-Leaks.
-`Vaultwarden` `1Password` `OIDC` `MFA` `TLS` `Append-Only`
-
-### ⚡ Multi-Standort-Server-Cluster mit Mesh-VPN & Tenant-Isolation · *In Betrieb*
-Server-Flotte (5 VPS + 2 Bare-Metal CPU/GPU) in Frankfurt mit Mesh-VPN, Reverse-Proxy-Layer, Cloudflare WAF und konsistentem Hardening-Profil über alle Knoten.
-`Hetzner` `Netbird` `WireGuard` `Cloudflare WAF` `K3s` `Caddy`
-
-### 🔧 Configuration-Management & Provisionierung · *Phase 5*
-Zentrales Inventory aller Mesh-Knoten, idempotente Playbooks für Hardening, SSH, Fail2Ban, Backup-Setup. Dry-Run-Workflow mit grüner Verifikation aller Knoten.
-`Ansible` `YAML` `Jinja2` `Vault-Lookup` `Git`
-
-### ⚡ Migration auf Ende-zu-Ende-verschlüsseltes Messaging · *Phasen 1–4 abgeschlossen*
-Vollständige Ablösung von Telegram durch self-hosted Matrix-Server mit Cross-Signing, gehärteter Webhook-API mit Themenkanälen und bewusster Federations-Reduktion.
-`Matrix-Synapse` `Element` `matrix-nio` `Olm/Megolm` `Cross-Signing`
-
-### ⚡ Backup-, Monitoring- und Observability-Stack · *In Betrieb*
-Append-Only-Backup mit Restore-Verifikation und Offsite-Kopie. Live-Cockpit über Server-Sent Events für Fleet-Health, LLM-Spend, Backup-Status und Heartbeat.
-`restic` `SFTP` `PostgreSQL` `OpenTelemetry` `SSE` `systemd`
-
-### ⚡ Job-Discovery- & Lead-Enrichment-Pipeline · *In Betrieb*
-Mehrquellige Pipeline (Apollo, SerpAPI, BA-für-Arbeit) mit RAG-Synchronisation, Cross-Host-Review-Oberfläche und regelbasierter Auto-Klassifikation (>85 %) plus LLM-Restmenge.
-`FastAPI` `PostgreSQL` `Apollo` `SerpAPI` `BA-API` `AnythingLLM`
+| # | Projekt | Beschreibung | Status | Tech-Stack |
+|---|---------|--------------|--------|------------|
+| 1 | **DARION — Multi-Tenant SaaS** | Modulare HR- & Projekt-Management-SaaS mit 18+ Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · Claude API · RAG · OpenTelemetry |
+| 2 | **Tina — Autonome KI-Software-Entwicklung** | Orchestrierter Coding-Agent (Temporal-Conductor/L0) mit Plan-/Critic-/Recall-Rollen, Distillations-Lern-Loop, 64k-Coder-Kontext (YaRN), strikter Gewaltenteilung (kein Auto-Merge); Bedienung aus core.darion-ai.de | Produktiv (Core-Hub) | Temporal · Claude · Qwen2.5-Coder · vLLM · Catalyst · MCP |
+| 3 | **DARION Core — Agenten-Orchestrierung** | Mixture-of-Agents-Framework mit Plan-, Critic-, Recall-Agent und Orchestrator; Unified Query Hub (6 Routen), Knowledge-Graph, 176 grüne Tests | 6 Phasen produktiv | Claude · LiteLLM · Graphiti · Neo4j · MCP · Langfuse |
+| 4 | **Wissens-Architektur & Self-Hosted-Wiki** | Souveräner Knowledge-Hub auf Outline (docs.darion-ai.tech) mit SSO und Federation zum Agenten-Wissensspeicher | Produktiv | Outline · Keycloak · Cloudflare Access · PostgreSQL · MinIO |
+| 5 | **KI-Governance — Supporter ⇄ Assistenz** | Hart getrennte interne KI-Rollen nach Least-Privilege (ERP-Supporter ohne Dokumente vs. need-to-know-RAG-Assistenz), durchgesetzt in der DB statt im Prompt, EU-AI-Act-konform | Konzept build-ready | PostgreSQL RLS · JWT · RAG · EU AI Act Art. 50 · Redact-before-Embed |
+| 6 | **Identity-, Geheimnis- & Schlüssel-Management** | Dualer Vault-Ansatz mit zweiter Vertrauenslinie, dokumentiertem Schlüssel-Lebenszyklus, Service-Accounts und scoped-Token-Minting | In Betrieb | Vaultwarden · 1Password · OIDC · MFA · TLS · Append-Only |
+| 7 | **Server-Cluster mit Mesh-VPN & Tenant-Isolation** | Flotte (5 VPS + 2 Bare-Metal CPU/GPU) mit Mesh-VPN, mehrschichtiger Firewall (DOCKER-USER-Layer), Reverse-Proxy, Cloudflare WAF, einheitlichem Hardening; inkl. Domain-Migration .de → .tech (6 Subdomains) | In Betrieb | Hetzner · Netbird · WireGuard · Cloudflare WAF · K3s · Caddy |
+| 8 | **Configuration-Management & Provisionierung** | Zentrales Inventory aller Mesh-Knoten, idempotente Playbooks (Hardening, SSH, Fail2Ban, Backup), Dry-Run-Workflow mit grüner Verifikation | Phase 5 | Ansible · YAML · Jinja2 · Vault-Lookup · Git |
+| 9 | **E2EE-Messaging-Migration** | Vollständige Ablösung von Telegram durch self-hosted Matrix mit Cross-Signing, gehärteter Webhook-API mit Themenkanälen, bewusster Federations-Reduktion | Phasen 1–4 fertig | Matrix-Synapse · Element · matrix-nio · Olm/Megolm · Cross-Signing |
+| 10 | **Backup-, Monitoring- & Observability-Stack** | Append-Only-Backup mit Restore-Verifikation und Offsite-Kopie; Live-Cockpit (SSE) für Fleet-Health, LLM-Spend, Backup-Status, Heartbeat; node_exporter-Flottenabdeckung | In Betrieb | restic · SFTP · PostgreSQL · OpenTelemetry · Prometheus · SSE |
+| 11 | **Job-Discovery- & Lead-Enrichment-Pipeline** | Mehrquellige Pipeline (Apollo, SerpAPI, BA) mit RAG-Sync, Cross-Host-Review-Oberfläche, regelbasierter Auto-Klassifikation (>85 %) plus LLM-Restmenge | In Betrieb | FastAPI · PostgreSQL · Apollo · SerpAPI · BA-API · AnythingLLM |
+| 12 | **DARC-Funnel & Marketing-Properties** | Eigenständige Marketing-Sites (darc-transform.de, darion-ai.de/.tech) plus Lead-Funnel mit Selbstcheck-Logik und CRM-Anbindung | Live | Next.js · Hostinger · Cloudflare · Docker Swarm · CRM-Intake |
 
 ---
 
