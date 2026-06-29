@@ -101,19 +101,83 @@ flowchart TD
 
 ## Tech-Stack
 
+**Sprachen & Runtime**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat&logo=nodedotjs&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=flat&logo=postgresql&logoColor=white)
+![YAML](https://img.shields.io/badge/YAML-CB171E?style=flat&logo=yaml&logoColor=white)
+
+**Backend & Frontend**
+
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white)
+![Celery](https://img.shields.io/badge/Celery-37814A?style=flat&logo=celery&logoColor=white)
+![Caddy](https://img.shields.io/badge/Caddy-1F88C0?style=flat&logo=caddy&logoColor=white)
+
+**Daten & Vektor-Stores**
+
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+![CloudNativePG](https://img.shields.io/badge/CloudNativePG-4169E1?style=flat&logo=cloudfoundry&logoColor=white)
+![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat)
 ![Neo4j](https://img.shields.io/badge/Neo4j-008CC1?style=flat&logo=neo4j&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+![ClickHouse](https://img.shields.io/badge/ClickHouse-FFCC01?style=flat&logo=clickhouse&logoColor=black)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=flat&logo=supabase&logoColor=white)
+![MinIO / S3](https://img.shields.io/badge/MinIO_%2F_S3-C72E49?style=flat&logo=minio&logoColor=white)
+
+**KI & LLM-Ops**
+
+![LiteLLM](https://img.shields.io/badge/LiteLLM-7C3AED?style=flat)
+![vLLM](https://img.shields.io/badge/vLLM-7C3AED?style=flat)
+![Temporal](https://img.shields.io/badge/Temporal-7C3AED?style=flat)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-7C3AED?style=flat)
+![MCP](https://img.shields.io/badge/MCP-7C3AED?style=flat)
+![Langfuse](https://img.shields.io/badge/Langfuse-7C3AED?style=flat)
+![BGE-M3 Embeddings](https://img.shields.io/badge/BGE--M3_Embeddings-7C3AED?style=flat)
+
+**Cloud · Kubernetes · IaC**
+
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/K3s-326CE5?style=flat&logo=kubernetes&logoColor=white)
-![Bare-Metal & VPS](https://img.shields.io/badge/Bare--Metal_%26_VPS-555555?style=flat)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
+![K3s](https://img.shields.io/badge/K3s-FFC61C?style=flat&logo=k3s&logoColor=black)
+![RKE2](https://img.shields.io/badge/RKE2-0075A8?style=flat&logo=rancher&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat&logo=argo&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat&logo=helm&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
-![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white)
+![Cilium](https://img.shields.io/badge/Cilium-F8C517?style=flat&logo=cilium&logoColor=black)
+![Kyverno](https://img.shields.io/badge/Kyverno-326CE5?style=flat)
+![Velero](https://img.shields.io/badge/Velero-2496ED?style=flat)
+![Bare-Metal & VPS](https://img.shields.io/badge/Bare--Metal_%26_VPS-555555?style=flat)
+
+**Observability**
+
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-425CC7?style=flat&logo=opentelemetry&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
+![Loki](https://img.shields.io/badge/Loki-F46800?style=flat&logo=grafana&logoColor=white)
+
+**Security & Identity**
+
+![Keycloak](https://img.shields.io/badge/Keycloak-4D4D4D?style=flat&logo=keycloak&logoColor=white)
+![OIDC / MFA](https://img.shields.io/badge/OIDC_%2F_MFA-F78C40?style=flat&logo=openid&logoColor=white)
+![1Password](https://img.shields.io/badge/1Password-3B66BC?style=flat&logo=1password&logoColor=white)
+![Vaultwarden](https://img.shields.io/badge/Vaultwarden-175DDC?style=flat&logo=bitwarden&logoColor=white)
+![Teleport](https://img.shields.io/badge/Teleport-512FC9?style=flat)
+![Trivy](https://img.shields.io/badge/Trivy-1904DA?style=flat&logo=aqua&logoColor=white)
+![WireGuard](https://img.shields.io/badge/WireGuard-88171A?style=flat&logo=wireguard&logoColor=white)
+![NetBird](https://img.shields.io/badge/NetBird-222222?style=flat)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
+
+**Kommunikation & Tooling**
+
+![Matrix-Synapse](https://img.shields.io/badge/Matrix--Synapse-000000?style=flat&logo=matrix&logoColor=white)
+![Element](https://img.shields.io/badge/Element-0DBD8B?style=flat&logo=element&logoColor=white)
+![Outline](https://img.shields.io/badge/Outline-0E1318?style=flat)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
 
 ---
 
