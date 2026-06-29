@@ -93,6 +93,7 @@ flowchart TD
 | 10 | **Backup-, Monitoring- & Observability-Stack** | Append-Only-Backup mit Restore-Verifikation und Offsite-Kopie; Live-Cockpit (SSE) für Fleet-Health, LLM-Spend, Backup-Status, Heartbeat; node_exporter-Flottenabdeckung | In Betrieb | restic · SFTP · PostgreSQL · OpenTelemetry · Prometheus · SSE |
 | 11 | **Job-Discovery- & Lead-Enrichment-Pipeline** | Mehrquellige Pipeline (Apollo, SerpAPI, BA) mit RAG-Sync, Cross-Host-Review-Oberfläche, regelbasierter Auto-Klassifikation (>85 %) plus LLM-Restmenge | In Betrieb | FastAPI · PostgreSQL · Apollo · SerpAPI · BA-API · AnythingLLM |
 | 12 | **DARC-Funnel & Marketing-Properties** | Eigenständige Marketing-Sites (darc-transform.de, darion-ai.de/.tech) plus Lead-Funnel mit Selbstcheck-Logik und CRM-Anbindung | Live | Next.js · Hostinger · Cloudflare · Docker Swarm · CRM-Intake |
+| 13 | **DARC System — Reifegrad-Check & Strategie-Workshop** | Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inkl. „Führung mit KI"), Reifegrade 0–4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell; begleitender Strategie-Workshop zur Ergebnis-Einordnung und Maßnahmen-Roadmap | Launch-bereit | Python · WeasyPrint · YAML · GPG · PDF |
 
 ---
 
