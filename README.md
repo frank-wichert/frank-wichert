@@ -60,7 +60,7 @@ flowchart TD
 
     SAAS --> DATA[("CNPG · PostgreSQL<br/>HA + Pooler")]
     CORE --> KG[("Neo4j · Knowledge-Graph")]
-    CORE --> LLM["Multi-LLM-Routing<br/>Claude + lokales LLM"]
+    CORE --> LLM["Multi-LLM-Routing<br/>lokale & externe LLM"]
     SAAS --> SEC["🔐 Vault · OIDC · MFA"]
     CORE --> SEC
     CLUSTER --> OBS["📊 Observability<br/>OpenTelemetry · Prometheus · Backup"]
@@ -81,9 +81,9 @@ flowchart TD
 
 | # | Projekt | Beschreibung | Status | Tech-Stack |
 |---|---------|--------------|--------|------------|
-| 1 | **DARION — Multi-Tenant SaaS** | Modulare HR- & Projekt-Management-SaaS mit 18+ Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · Claude API · RAG · OpenTelemetry |
-| 2 | **Tina — Autonome KI-Software-Entwicklung** | Orchestrierter Coding-Agent (Temporal-Conductor/L0) mit Plan-/Critic-/Recall-Rollen, Distillations-Lern-Loop, 64k-Coder-Kontext (YaRN), strikter Gewaltenteilung (kein Auto-Merge); Bedienung aus core.darion-ai.de | Produktiv (Core-Hub) | Temporal · Claude · Qwen2.5-Coder · vLLM · Catalyst · MCP |
-| 3 | **DARION Core — Agenten-Orchestrierung** | Mixture-of-Agents-Framework mit Plan-, Critic-, Recall-Agent und Orchestrator; Unified Query Hub (6 Routen), Knowledge-Graph, 176 grüne Tests | 6 Phasen produktiv | Claude · LiteLLM · Graphiti · Neo4j · MCP · Langfuse |
+| 1 | **DARION — Multi-Tenant SaaS** | Modulare HR- & Projekt-Management-SaaS mit 18+ Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · LLM-API · RAG · OpenTelemetry |
+| 2 | **Tina — Autonome KI-Software-Entwicklung** | Orchestrierter Coding-Agent (Temporal-Conductor/L0) mit Plan-/Critic-/Recall-Rollen, Distillations-Lern-Loop, 64k-Coder-Kontext (YaRN), strikter Gewaltenteilung (kein Auto-Merge); Bedienung aus core.darion-ai.de | Produktiv (Core-Hub) | Temporal · Qwen2.5-Coder · vLLM · Catalyst · MCP |
+| 3 | **DARION Core — Agenten-Orchestrierung** | Mixture-of-Agents-Framework mit Plan-, Critic-, Recall-Agent und Orchestrator; Unified Query Hub (6 Routen), Knowledge-Graph, 176 grüne Tests | 6 Phasen produktiv | LiteLLM · Graphiti · Neo4j · MCP · Langfuse |
 | 4 | **Wissens-Architektur & Self-Hosted-Wiki** | Souveräner Knowledge-Hub auf Outline (docs.darion-ai.tech) mit SSO und Federation zum Agenten-Wissensspeicher | Produktiv | Outline · Keycloak · Cloudflare Access · PostgreSQL · MinIO |
 | 5 | **KI-Governance — Supporter ⇄ Assistenz** | Hart getrennte interne KI-Rollen nach Least-Privilege (ERP-Supporter ohne Dokumente vs. need-to-know-RAG-Assistenz), durchgesetzt in der DB statt im Prompt, EU-AI-Act-konform | Konzept build-ready | PostgreSQL RLS · JWT · RAG · EU AI Act Art. 50 · Redact-before-Embed |
 | 6 | **Identity-, Geheimnis- & Schlüssel-Management** | Dualer Vault-Ansatz mit zweiter Vertrauenslinie, dokumentiertem Schlüssel-Lebenszyklus, Service-Accounts und scoped-Token-Minting | In Betrieb | Vaultwarden · 1Password · OIDC · MFA · TLS · Append-Only |
@@ -94,7 +94,7 @@ flowchart TD
 | 11 | **Job-Discovery- & Lead-Enrichment-Pipeline** | Mehrquellige Pipeline (Apollo, SerpAPI, BA) mit RAG-Sync, Cross-Host-Review-Oberfläche, regelbasierter Auto-Klassifikation (>85 %) plus LLM-Restmenge | In Betrieb | FastAPI · PostgreSQL · Apollo · SerpAPI · BA-API · AnythingLLM |
 | 12 | **DARC-Funnel & Marketing-Properties** | Eigenständige Marketing-Sites (darc-transform.de, darion-ai.de/.tech) plus Lead-Funnel mit Selbstcheck-Logik und CRM-Anbindung | Live | Next.js · Hostinger · Cloudflare · Docker Swarm · CRM-Intake |
 | 13 | **DARC System — Reifegrad-Check & Strategie-Workshop** | Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inkl. „Führung mit KI"), Reifegrade 0–4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell; begleitender Strategie-Workshop zur Ergebnis-Einordnung und Maßnahmen-Roadmap | Launch-bereit | Python · WeasyPrint · YAML · GPG · PDF |
-| 14 | **Wissens-gestützte KI-Assistenten — RAG ohne Halluzination** | Chat- und Assistenz-Bots, die ausschließlich aus dem souveränen Wissensspeicher antworten (RAG über pgvector/BGE-M3 + Knowledge-Graph statt Modell-Wissen); Grounding mit „Weiß-ich-nicht"-Fallback statt Raten, plus Dual-LLM/CaMeL-Leitplanken gegen Prompt-Injection und Daten-Poisoning | Recall produktiv · Assistenz im Bau | RAG · pgvector · BGE-M3 · Neo4j · Dual-LLM/CaMeL · Claude |
+| 14 | **Wissens-gestützte KI-Assistenten — RAG ohne Halluzination** | Chat- und Assistenz-Bots, die ausschließlich aus dem souveränen Wissensspeicher antworten (RAG über pgvector/BGE-M3 + Knowledge-Graph statt Modell-Wissen); Grounding mit „Weiß-ich-nicht"-Fallback statt Raten, plus Dual-LLM/CaMeL-Leitplanken gegen Prompt-Injection und Daten-Poisoning | In Betrieb | RAG · pgvector · BGE-M3 · Neo4j · Dual-LLM/CaMeL · LiteLLM |
 
 ---
 
@@ -112,7 +112,6 @@ flowchart TD
 ![Hetzner](https://img.shields.io/badge/Hetzner-D50C2D?style=flat&logo=hetzner&logoColor=white)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=flat&logo=cloudflare&logoColor=white)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat&logo=ansible&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude_API-CC785C?style=flat&logo=anthropic&logoColor=white)
 ![Matrix](https://img.shields.io/badge/Matrix-000000?style=flat&logo=matrix&logoColor=white)
 
 ---
