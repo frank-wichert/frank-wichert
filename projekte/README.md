@@ -53,7 +53,7 @@ Jeder Eintrag trägt eine `🏷️`-Tag-Zeile mit Rolle, Branche, Thema und Comp
 | 10 | **Backup-, Monitoring- und Observability-Stack** | Append-Only-Backup mit Restore-Verifikation und Offsite-Kopie; Live-Cockpit (SSE) für Fleet-Health, LLM-Spend und Heartbeat | In Betrieb | restic · SFTP · PostgreSQL · OpenTelemetry · Prometheus · SSE |
 | 11 | **Job-Discovery- und Lead-Enrichment-Pipeline** | Mehrquellige Pipeline mit RAG-Sync, Cross-Host-Review-Oberfläche und regelbasierter Auto-Klassifikation (> 85 %) plus LLM-Restmenge | In Betrieb | FastAPI · PostgreSQL · Apollo · SerpAPI · AnythingLLM |
 | 12 | **DARC-Funnel und Marketing-Properties** | Eigenständige Marketing-Sites plus Lead-Funnel mit Selbstcheck-Logik und CRM-Anbindung | Live | Next.js · Cloudflare · Docker Swarm · CRM-Intake |
-| 13 | **DARC System · Reifegrad-Check und Strategie-Workshop** | Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen, Reifegrade 0 bis 4, optionaler NIS-2/KRITIS-Check, automatischer PDF-Report | Live | Python · WeasyPrint · YAML · GPG · PDF |
+| 13 | **[DARC System](https://darc-system.de) · Reifegrad-Check und Strategie-Workshop** | Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen, Reifegrade 0 bis 4, optionaler NIS-2/KRITIS-Check, automatischer PDF-Report | Live | Python · WeasyPrint · YAML · GPG · PDF |
 | 14 | **Wissens-gestützte KI-Assistenten · RAG ohne Halluzination** | Assistenz-Bots, die ausschließlich aus dem souveränen Wissensspeicher antworten (RAG plus Knowledge-Graph), mit Weiß-ich-nicht-Fallback und Dual-LLM/CaMeL-Leitplanken | In Betrieb | RAG · pgvector · BGE-M3 · Neo4j · Dual-LLM/CaMeL · LiteLLM |
 | 15 | **DARION-AI · Souveräne Cloud-Migration und HA-Betrieb** | Verlagerung der kompletten Umgebung auf souveräne, deutsche Cloud: 3 hochverfügbare Cluster (keine Single-Server), GitOps, verschlüsselte WORM-Backups, verlustfreier Cutover je Domäne · [**Planung, Durchführung und Tests →**](./darion-ai-cloud-migration.md) | Konzept abgeschlossen | RKE2 · Cilium · ArgoCD · CloudNativePG · Terraform · Velero · Kyverno |
 | 16 | **DARION-AI Meetings · native Meetings und Transkription** | In die Plattform integriertes Meetings-Modul mit Live-Audio/Video, Aufzeichnung sowie automatischer Transkription und Zusammenfassung, souverän ohne US-Dienste | Im Ausbau | LiveKit · Whisper · Qwen3 · Next.js · PostgreSQL |
@@ -274,7 +274,7 @@ Self-hosted Business-Suite für KMU mit CRM, Projekten, HR, Recruiting und Rechn
 🏷️ Business-Suite · CRM · HR · Recruiting · Faktura · self-hosted · KMU
 
 ### DARC System · Reifegrad-Check und Strategie-Workshop
-**Status: Live**
+**Status: Live** · [darc-system.de](https://darc-system.de)
 Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inklusive „Führung mit KI"), Reifegrade 0 bis 4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell, dazu ein begleitender Strategie-Workshop zur Einordnung der Ergebnisse.
 **Mehrwert:** Objektive Standortbestimmung mit konkreter Maßnahmen-Roadmap statt Bauchgefühl, inklusive regulatorischer Betroffenheit (NIS 2, KRITIS).
 🏷️ Assessment · Reifegrad · NIS2/KRITIS · Strategie · PDF-Report
