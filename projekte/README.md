@@ -267,6 +267,12 @@ Self-hosted KI-Assistent für den regulierten Mittelstand (Steuerkanzleien, Rech
 **Mehrwert:** Macht Compliance zu einer technischen Eigenschaft des Systems statt zu bloßer Dokumentation. Ein Governance-Gate prüft jede Aktion vor der Ausführung, Auskünfte sind belegt statt halluziniert, jede Aktion landet in einem signierten Audit-Log, Konnektoren (z. B. DATEV) bleiben read-only, und Hochrisiko-Aktionen bleiben Human-in-the-Loop. EU-AI-Act-konform ab Tag 1.
 🏷️ KI-Assistent · Governance-Gate · Audit-Log · RAG · EU AI Act · self-hosted · regulierter Mittelstand
 
+### DARC Suite · Self-hosted Business-Suite
+**Status: In Betrieb**
+Self-hosted Business-Suite für KMU mit CRM, Projekten, HR, Recruiting und Rechnungsstellung, betrieben und gehärtet auf eigener Infrastruktur in Deutschland.
+**Mehrwert:** Deckt die operativen Kernprozesse vom Vertrieb bis zur Faktura in einer souveränen Umgebung ohne US-Cloud ab, mit gehärtetem Betrieb (Least-Privilege, Backups, Monitoring).
+🏷️ Business-Suite · CRM · HR · Recruiting · Faktura · self-hosted · KMU
+
 ### DARC System · Reifegrad-Check und Strategie-Workshop
 **Status: Launch-bereit**
 Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inklusive „Führung mit KI"), Reifegrade 0 bis 4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell, dazu ein begleitender Strategie-Workshop zur Einordnung der Ergebnisse.

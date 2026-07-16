@@ -108,6 +108,7 @@ flowchart TD
 | Produkt | Zusammenfassung | Mehrwert | Status |
 |---------|-----------------|----------|--------|
 | **[DARC One](https://darc-transform.de/darc-one/)** | Souveräner, self-hosted KI-Assistent für den regulierten Mittelstand (Kanzleien, Praxen, Versicherungsvermittler), erreichbar per Telefon, Web-Chat und Matrix | Compliance als technische Eigenschaft statt Dokumentation: Governance-Gate vor jeder Aktion, belegte Auskünfte statt Halluzination, signiertes Audit-Log, Read-only-Konnektoren (z. B. DATEV), Human-in-the-Loop, EU-AI-Act-konform ab Tag 1 | Live |
+| **DARC Suite** | Self-hosted Business-Suite für KMU mit CRM, Projekten, HR, Recruiting und Rechnungsstellung, betrieben und gehärtet auf eigener Infrastruktur in Deutschland | Deckt die operativen Kernprozesse vom Vertrieb bis zur Faktura in einer souveränen Umgebung ohne US-Cloud ab, mit gehärtetem Betrieb (Least-Privilege, Backups, Monitoring) | In Betrieb |
 | **DARC System** | Geführter Reifegrad-Check für Digitalisierung, KI und Compliance (8 Module über 3 Ebenen) mit automatischem PDF-Report und begleitendem Strategie-Workshop | Objektive Standortbestimmung inkl. NIS-2/KRITIS-Betroffenheit und konkreter Maßnahmen-Roadmap statt Bauchgefühl | Launch-bereit |
 
 ---
