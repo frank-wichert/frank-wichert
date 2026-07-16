@@ -28,9 +28,10 @@ Jeder Eintrag trägt eine `🏷️`-Tag-Zeile mit Rolle, Branche, Thema und Comp
 1. [DARC-Eigenentwicklungen und KI-Plattformen (seit 08/2024)](#a-darc-eigenentwicklungen-und-ki-plattformen)
 2. [Interim-Referenzmandate (Auswahl)](#b-interim-referenzmandate-auswahl)
 3. [UAV und Bundeswehr](#c-uav-und-bundeswehr)
-4. [Master-Übersicht (alle Mandate auf einen Blick)](#master-übersicht)
-5. [Nach Branche filtern](#nach-branche-filtern)
-6. [Tag-Legende](#tag-legende)
+4. [DARC-Produkte](#d-darc-produkte)
+5. [Master-Übersicht (alle Mandate auf einen Blick)](#master-übersicht)
+6. [Nach Branche filtern](#nach-branche-filtern)
+7. [Tag-Legende](#tag-legende)
 
 ---
 
@@ -40,7 +41,7 @@ Jeder Eintrag trägt eine `🏷️`-Tag-Zeile mit Rolle, Branche, Thema und Comp
 
 | # | Projekt | Kurzbeschreibung | Status | Kern-Stack |
 |---|---------|------------------|--------|------------|
-| 1 | **DARION-AI · Multi-Tenant-SaaS** | Modulare HR- und Projekt-Management-SaaS mit 16 aktiven Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), weitere im Ausbau; Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥ 80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · RAG · OpenTelemetry |
+| 1 | **DARION-AI · Multi-Tenant-SaaS** | Modulare Business-Suite mit 20 Fachmodulen, davon 16 verfügbar (u. a. Finanzen, HR, Vertrieb, Projekte/PSA, Verträge, E-Rechnung, Zeiterfassung, IT-Management, DMS, Wissen, ISMS, DSGVO-Compliance), 4 im Ausbau; Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥ 80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · RAG · OpenTelemetry |
 | 2 | **Zentrale Coding-Plattform (Tina)** | Orchestrierte, autonome Software-Entwicklung mit Gewaltenteilung: lokale Code-Modelle bauen tier-basiert, ein unabhängiges Review-Modell prüft jeden Beitrag, Merge nur über Draft-PR (kein Auto-Merge). Plan-, Critic- und Recall-Rollen, Lern-Loop | Pilot-Loop produktiv | Temporal · vLLM · MCP · Catalyst |
 | 3 | **DARION Core · Agenten-Orchestrierung** | Mixture-of-Agents-Framework mit Plan-, Critic- und Recall-Agent plus Orchestrator; Unified Query Hub, Knowledge-Graph, 176 grüne Tests | 6 Phasen produktiv | LiteLLM · Graphiti · Neo4j · MCP · Langfuse |
 | 4 | **Wissens-Architektur und Self-Hosted-Wiki** | Souveräner Knowledge-Hub mit SSO und Federation zum Agenten-Wissensspeicher | Produktiv | Outline · Keycloak · Cloudflare Access · PostgreSQL · MinIO |
@@ -253,6 +254,24 @@ Aufbau und Entwicklung unbemannter Flugsysteme, Schulung und Ausbildung mit Webi
 Verantwortlich für zwei Rechenzentren, Leitung mehrerer Kommunikations-Trupps im Auslandseinsatz mit Anbindung an Fremd-Truppenteile, Leitung von Fahrzeug- und Träger-Umbauten inkl. Funktionstests, Aufbau und Betrieb einer Server-Infrastruktur auf einem Flughafen, Aufbau und Betrieb eines User Help Desks, Entwicklung einer Virtualisierungsstufe für die Bundeswehr / BWI, vier Auslandseinsätze.
 `Tech & Methoden:` SatCom, Tetrapol, Funktechnik (SEM52S/SL, SEM90, SEM93), FüInfoSys Heer, NuKomBW, Kryptoverschlüsselung, Microsoft Server, Storage, Lotus Notes Domino, SASPF/R3.
 🏷️ Behörden/Defence · Bundeswehr · Führung · Rechenzentrum · Auslandseinsatz · KRITIS
+
+---
+
+## D. DARC-Produkte
+
+> Produkte der DARC Management UG rund um souveräne KI und Digitalisierung.
+
+### DARC One · Souveräner KI-Assistent
+**Status: Live** · [darc-transform.de/darc-one](https://darc-transform.de/darc-one/)
+Self-hosted KI-Assistent für den regulierten Mittelstand (Steuerkanzleien, Rechtsanwälte, Arztpraxen, Versicherungsvermittler, datenschutzsensible Betriebe). Erreichbar über Telefon, Website-Chat und Matrix, betrieben in Deutschland ohne US-Dienste.
+**Mehrwert:** Macht Compliance zu einer technischen Eigenschaft des Systems statt zu bloßer Dokumentation. Ein Governance-Gate prüft jede Aktion vor der Ausführung, Auskünfte sind belegt statt halluziniert, jede Aktion landet in einem signierten Audit-Log, Konnektoren (z. B. DATEV) bleiben read-only, und Hochrisiko-Aktionen bleiben Human-in-the-Loop. EU-AI-Act-konform ab Tag 1.
+🏷️ KI-Assistent · Governance-Gate · Audit-Log · RAG · EU AI Act · self-hosted · regulierter Mittelstand
+
+### DARC System · Reifegrad-Check und Strategie-Workshop
+**Status: Launch-bereit**
+Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inklusive „Führung mit KI"), Reifegrade 0 bis 4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell, dazu ein begleitender Strategie-Workshop zur Einordnung der Ergebnisse.
+**Mehrwert:** Objektive Standortbestimmung mit konkreter Maßnahmen-Roadmap statt Bauchgefühl, inklusive regulatorischer Betroffenheit (NIS 2, KRITIS).
+🏷️ Assessment · Reifegrad · NIS2/KRITIS · Strategie · PDF-Report
 
 ---
 

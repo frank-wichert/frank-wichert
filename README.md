@@ -50,7 +50,7 @@ flowchart TD
     CF --> MESH["Mesh-VPN · Reverse-Proxy<br/>5 VPS + 2 Bare-Metal CPU/GPU"]
 
     subgraph CLUSTER["K3s-Cluster · Multi-Tenancy"]
-        SAAS["DARION-AI SaaS<br/>16 Fachmodule"]
+        SAAS["DARION-AI SaaS<br/>20 Module · 16 live"]
         CORE["DARION Core + Tina<br/>KI-Agenten-Orchestrierung"]
         WIKI["Wissens-Hub<br/>Outline / RAG"]
     end
@@ -82,7 +82,7 @@ flowchart TD
 
 | # | Projekt | Beschreibung | Status | Tech-Stack |
 |---|---------|--------------|--------|------------|
-| 1 | **DARION-AI — Multi-Tenant SaaS** | Modulare HR- & Projekt-Management-SaaS mit 16 aktiven Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), weitere im Ausbau; Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · LLM-API · RAG · OpenTelemetry |
+| 1 | **DARION-AI — Multi-Tenant SaaS** | Modulare Business-Suite mit 20 Fachmodulen, davon 16 verfügbar (u. a. Finanzen, HR, Vertrieb, Projekte/PSA, Verträge, E-Rechnung, Zeiterfassung, IT-Management, DMS, Wissen, ISMS, DSGVO-Compliance), 4 im Ausbau; Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · LLM-API · RAG · OpenTelemetry |
 | 2 | **Zentrale Coding-Plattform (Tina)** | Orchestrierte, autonome Software-Entwicklung mit Gewaltenteilung: lokale Code-Modelle bauen tier-basiert, ein unabhängiges Review-Modell prüft jeden Beitrag, Merge nur über Draft-PR (kein Auto-Merge). Plan-/Critic-/Recall-Rollen, Lern-Loop, 64k-Coder-Kontext | Pilot-Loop produktiv | Temporal · vLLM · MCP · Catalyst |
 | 3 | **DARION Core — Agenten-Orchestrierung** | Mixture-of-Agents-Framework mit Plan-, Critic-, Recall-Agent und Orchestrator; Unified Query Hub (6 Routen), Knowledge-Graph, 176 grüne Tests | 6 Phasen produktiv | LiteLLM · Graphiti · Neo4j · MCP · Langfuse |
 | 4 | **Wissens-Architektur & Self-Hosted-Wiki** | Souveräner Knowledge-Hub auf Outline (docs.darion-ai.tech) mit SSO und Federation zum Agenten-Wissensspeicher | Produktiv | Outline · Keycloak · Cloudflare Access · PostgreSQL · MinIO |
@@ -98,6 +98,17 @@ flowchart TD
 | 14 | **Wissens-gestützte KI-Assistenten — RAG ohne Halluzination** | Chat- und Assistenz-Bots, die ausschließlich aus dem souveränen Wissensspeicher antworten (RAG über pgvector/BGE-M3 + Knowledge-Graph statt Modell-Wissen); Grounding mit „Weiß-ich-nicht"-Fallback statt Raten, plus Dual-LLM/CaMeL-Leitplanken gegen Prompt-Injection und Daten-Poisoning | In Betrieb | RAG · pgvector · BGE-M3 · Neo4j · Dual-LLM/CaMeL · LiteLLM |
 | 15 | **DARION-AI — Souveräne Cloud-Migration & HA-Betrieb** | Verlagerung der kompletten DARION-AI-Umgebung auf eine souveräne, deutsche Cloud: Konsolidierung auf 3 hochverfügbare Kubernetes-Cluster (keine Single-Server), GitOps, verschlüsselte WORM-Backups (Object-Lock, dual-region), gesicherter und **verlustfreier** Cutover je Domäne. Gesichert und nachhaltig von Tag 1. → **[Planung, Durchführung & Tests](./projekte/darion-ai-cloud-migration.md)** | Konzept abgeschlossen | RKE2 · Cilium · ArgoCD · CloudNativePG · Terraform · Velero · OpenTelemetry · Kyverno |
 | 16 | **DARION-AI Meetings — native Meetings & Transkription** | In die Plattform integriertes Meetings-Modul mit Live-Audio/Video, Aufzeichnung sowie automatischer Transkription und Zusammenfassung, souverän ohne US-Dienste | Im Ausbau | LiveKit · Whisper · Qwen3 · Next.js · PostgreSQL |
+
+---
+
+## 🧩 DARC-Produktfamilie
+
+> Neben DARION-AI betreibt die DARC Management UG weitere Produkte.
+
+| Produkt | Zusammenfassung | Mehrwert | Status |
+|---------|-----------------|----------|--------|
+| **[DARC One](https://darc-transform.de/darc-one/)** | Souveräner, self-hosted KI-Assistent für den regulierten Mittelstand (Kanzleien, Praxen, Versicherungsvermittler), erreichbar per Telefon, Web-Chat und Matrix | Compliance als technische Eigenschaft statt Dokumentation: Governance-Gate vor jeder Aktion, belegte Auskünfte statt Halluzination, signiertes Audit-Log, Read-only-Konnektoren (z. B. DATEV), Human-in-the-Loop, EU-AI-Act-konform ab Tag 1 | Live |
+| **DARC System** | Geführter Reifegrad-Check für Digitalisierung, KI und Compliance (8 Module über 3 Ebenen) mit automatischem PDF-Report und begleitendem Strategie-Workshop | Objektive Standortbestimmung inkl. NIS-2/KRITIS-Betroffenheit und konkreter Maßnahmen-Roadmap statt Bauchgefühl | Launch-bereit |
 
 ---
 
