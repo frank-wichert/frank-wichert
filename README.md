@@ -16,6 +16,7 @@
 [![Termin buchen](https://img.shields.io/badge/📅_Termin_buchen-2563EB?style=for-the-badge)](https://book.darion-ai.de)
 [![Keynote anfragen](https://img.shields.io/badge/🎤_Keynote_anfragen-7C3AED?style=for-the-badge)](mailto:frank.wichert@darc-mgt.de?subject=Keynote-Anfrage)
 [![Verfügbar](https://img.shields.io/badge/48h_einsatzbereit-22C55E?style=for-the-badge)]()
+[![Projekte & Referenzen](https://img.shields.io/badge/📂_Projekte_&_Referenzen-1F2937?style=for-the-badge)](./projekte/)
 
 ![Profil-Aufrufe](https://komarev.com/ghpvc/?username=frank-wichert&style=flat&color=2563EB&label=Profil-Aufrufe)
 
@@ -96,6 +97,14 @@ flowchart TD
 | 13 | **DARC System — Reifegrad-Check & Strategie-Workshop** | Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inkl. „Führung mit KI"), Reifegrade 0–4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell; begleitender Strategie-Workshop zur Ergebnis-Einordnung und Maßnahmen-Roadmap | Launch-bereit | Python · WeasyPrint · YAML · GPG · PDF |
 | 14 | **Wissens-gestützte KI-Assistenten — RAG ohne Halluzination** | Chat- und Assistenz-Bots, die ausschließlich aus dem souveränen Wissensspeicher antworten (RAG über pgvector/BGE-M3 + Knowledge-Graph statt Modell-Wissen); Grounding mit „Weiß-ich-nicht"-Fallback statt Raten, plus Dual-LLM/CaMeL-Leitplanken gegen Prompt-Injection und Daten-Poisoning | In Betrieb | RAG · pgvector · BGE-M3 · Neo4j · Dual-LLM/CaMeL · LiteLLM |
 | 15 | **DARION-AI — Souveräne Cloud-Migration & HA-Betrieb** | Verlagerung der kompletten DARION-AI-Umgebung auf eine souveräne, deutsche Cloud: Konsolidierung auf 3 hochverfügbare Kubernetes-Cluster (keine Single-Server), GitOps, verschlüsselte WORM-Backups (Object-Lock, dual-region), gesicherter und **verlustfreier** Cutover je Domäne. Gesichert und nachhaltig von Tag 1. → **[Planung, Durchführung & Tests](./projekte/darion-ai-cloud-migration.md)** | Konzept abgeschlossen | RKE2 · Cilium · ArgoCD · CloudNativePG · Terraform · Velero · OpenTelemetry · Kyverno |
+
+---
+
+## 📂 Alle Projekte & Referenzen
+
+> **Über 80 Projekte in mehr als 20 Jahren.** Der vollständige, durchsuchbare Katalog bündelt die DARC-Eigenentwicklungen und rund 30 Interim-Referenzmandate (Gesundheitswesen, Öffentlicher Sektor, Automotive, Logistik, Pharma, Energie u. v. m.) sowie Bundeswehr und UAV. Nach **Jahr, Branche und Technologie** durchsuchbar.
+>
+> ### → [**Zum Projekt- & Referenz-Katalog**](./projekte/)
 
 ---
 
