@@ -50,7 +50,7 @@ flowchart TD
     CF --> MESH["Mesh-VPN · Reverse-Proxy<br/>5 VPS + 2 Bare-Metal CPU/GPU"]
 
     subgraph CLUSTER["K3s-Cluster · Multi-Tenancy"]
-        SAAS["DARION SaaS<br/>18+ Fachmodule"]
+        SAAS["DARION-AI SaaS<br/>16 Fachmodule"]
         CORE["DARION Core + Tina<br/>KI-Agenten-Orchestrierung"]
         WIKI["Wissens-Hub<br/>Outline / RAG"]
     end
@@ -82,8 +82,8 @@ flowchart TD
 
 | # | Projekt | Beschreibung | Status | Tech-Stack |
 |---|---------|--------------|--------|------------|
-| 1 | **DARION — Multi-Tenant SaaS** | Modulare HR- & Projekt-Management-SaaS mit 18+ Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · LLM-API · RAG · OpenTelemetry |
-| 2 | **Tina — Autonome KI-Software-Entwicklung** | Orchestrierter Coding-Agent (Temporal-Conductor/L0) mit Plan-/Critic-/Recall-Rollen, Distillations-Lern-Loop, 64k-Coder-Kontext (YaRN), strikter Gewaltenteilung (kein Auto-Merge); Bedienung aus core.darion-ai.de | Produktiv (Core-Hub) | Temporal · Qwen2.5-Coder · vLLM · Catalyst · MCP |
+| 1 | **DARION-AI — Multi-Tenant SaaS** | Modulare HR- & Projekt-Management-SaaS mit 16 aktiven Fachmodulen (Leistungserfassung/PSA, Buchhaltung/DATEV, Projekte, Reporting), weitere im Ausbau; Multi-LLM-Routing, RAG-Layer, Live-Cockpit, CNPG-HA mit Pooler, CI/CD ≥80 % Coverage | Launch 18.08.2026 | FastAPI · Next.js 15 · K3s · CloudNativePG · LLM-API · RAG · OpenTelemetry |
+| 2 | **Zentrale Coding-Plattform (Tina)** | Orchestrierte, autonome Software-Entwicklung mit Gewaltenteilung: lokale Code-Modelle bauen tier-basiert, ein unabhängiges Review-Modell prüft jeden Beitrag, Merge nur über Draft-PR (kein Auto-Merge). Plan-/Critic-/Recall-Rollen, Lern-Loop, 64k-Coder-Kontext | Pilot-Loop produktiv | Temporal · vLLM · MCP · Catalyst |
 | 3 | **DARION Core — Agenten-Orchestrierung** | Mixture-of-Agents-Framework mit Plan-, Critic-, Recall-Agent und Orchestrator; Unified Query Hub (6 Routen), Knowledge-Graph, 176 grüne Tests | 6 Phasen produktiv | LiteLLM · Graphiti · Neo4j · MCP · Langfuse |
 | 4 | **Wissens-Architektur & Self-Hosted-Wiki** | Souveräner Knowledge-Hub auf Outline (docs.darion-ai.tech) mit SSO und Federation zum Agenten-Wissensspeicher | Produktiv | Outline · Keycloak · Cloudflare Access · PostgreSQL · MinIO |
 | 5 | **KI-Governance — Supporter ⇄ Assistenz** | Hart getrennte interne KI-Rollen nach Least-Privilege (ERP-Supporter ohne Dokumente vs. need-to-know-RAG-Assistenz), durchgesetzt in der DB statt im Prompt, EU-AI-Act-konform | Konzept build-ready | PostgreSQL RLS · JWT · RAG · EU AI Act Art. 50 · Redact-before-Embed |
@@ -97,6 +97,7 @@ flowchart TD
 | 13 | **DARC System — Reifegrad-Check & Strategie-Workshop** | Geführtes Self-Assessment für Digitalisierung, KI und Compliance: 8 Module über 3 Ebenen (inkl. „Führung mit KI"), Reifegrade 0–4, optionaler NIS-2/KRITIS-Betroffenheits-Check, automatisch erzeugter PDF-Report mit RACI- und Schichtenmodell; begleitender Strategie-Workshop zur Ergebnis-Einordnung und Maßnahmen-Roadmap | Launch-bereit | Python · WeasyPrint · YAML · GPG · PDF |
 | 14 | **Wissens-gestützte KI-Assistenten — RAG ohne Halluzination** | Chat- und Assistenz-Bots, die ausschließlich aus dem souveränen Wissensspeicher antworten (RAG über pgvector/BGE-M3 + Knowledge-Graph statt Modell-Wissen); Grounding mit „Weiß-ich-nicht"-Fallback statt Raten, plus Dual-LLM/CaMeL-Leitplanken gegen Prompt-Injection und Daten-Poisoning | In Betrieb | RAG · pgvector · BGE-M3 · Neo4j · Dual-LLM/CaMeL · LiteLLM |
 | 15 | **DARION-AI — Souveräne Cloud-Migration & HA-Betrieb** | Verlagerung der kompletten DARION-AI-Umgebung auf eine souveräne, deutsche Cloud: Konsolidierung auf 3 hochverfügbare Kubernetes-Cluster (keine Single-Server), GitOps, verschlüsselte WORM-Backups (Object-Lock, dual-region), gesicherter und **verlustfreier** Cutover je Domäne. Gesichert und nachhaltig von Tag 1. → **[Planung, Durchführung & Tests](./projekte/darion-ai-cloud-migration.md)** | Konzept abgeschlossen | RKE2 · Cilium · ArgoCD · CloudNativePG · Terraform · Velero · OpenTelemetry · Kyverno |
+| 16 | **DARION-AI Meetings — native Meetings & Transkription** | In die Plattform integriertes Meetings-Modul mit Live-Audio/Video, Aufzeichnung sowie automatischer Transkription und Zusammenfassung, souverän ohne US-Dienste | Im Ausbau | LiveKit · Whisper · Qwen3 · Next.js · PostgreSQL |
 
 ---
 
