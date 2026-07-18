@@ -17,6 +17,7 @@
 [![Keynote anfragen](https://img.shields.io/badge/🎤_Keynote_anfragen-7C3AED?style=for-the-badge)](mailto:frank.wichert@darc-mgt.de?subject=Keynote-Anfrage)
 [![Verfügbar](https://img.shields.io/badge/48h_einsatzbereit-22C55E?style=for-the-badge)]()
 [![Projekte & Referenzen](https://img.shields.io/badge/📂_Projekte_&_Referenzen-1F2937?style=for-the-badge)](./projekte/)
+[![Profil-Website](https://img.shields.io/badge/🌐_Profil--Website-1F2937?style=for-the-badge)](https://frank-wichert.github.io/frank-wichert/)
 
 ![Profil-Aufrufe](https://komarev.com/ghpvc/?username=frank-wichert&style=flat&color=2563EB&label=Profil-Aufrufe)
 
