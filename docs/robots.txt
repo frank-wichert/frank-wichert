@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://frank-wichert.github.io/frank-wichert/sitemap.xml
